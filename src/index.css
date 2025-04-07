@@ -1,0 +1,32 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+
+.playfair-display {
+  font-family: "Playfair Display", serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+}
+
+/* You can create specific weight classes like this: */
+.playfair-display-400 {
+  font-weight: 400;
+}
+
+.playfair-display-500 {
+  font-weight: 500;
+}
+
+.playfair-display-600 {
+  font-weight: 600;
+}
+
+.playfair-display-700 {
+  font-weight: 700;
+}
+
+.playfair-display-800 {
+  font-weight: 800;
+}
+
+.playfair-display-900 {
+  font-weight: 900;
+}

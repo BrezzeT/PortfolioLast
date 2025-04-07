@@ -1,0 +1,254 @@
+.about {
+    min-height: 100vh;
+    background-color: #000000;
+    padding: 120px 0 150px;
+    color: #ffffff;
+    position: relative;
+    overflow: hidden;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+    position: relative;
+    z-index: 1;
+}
+
+.about h2 {
+    font-size: 3.5rem;
+    text-align: center;
+    margin-bottom: 5rem;
+    font-weight: 700;
+    color: #ffffff;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1.5rem;
+}
+
+.about h2::before,
+.about h2::after {
+    content: '';
+    height: 1px;
+    width: 50px;
+    background: linear-gradient(to right, transparent, #ffffff);
+}
+
+.about h2::after {
+    background: linear-gradient(to left, transparent, #ffffff);
+}
+
+.content {
+    display: grid;
+    grid-template-columns: 1fr 1.5fr;
+    gap: 5rem;
+    align-items: start;
+    background: #0a0a0a;
+    border-radius: 20px;
+    padding: 3rem;
+    border: 1px solid #1a1a1a;
+    margin-bottom: 80px;
+}
+
+.photoSection {
+    position: relative;
+}
+
+.photoFrame {
+    aspect-ratio: 1;
+    border-radius: 15px;
+    overflow: hidden;
+    position: relative;
+    background: #0a0a0a;
+    border: 1px solid #1a1a1a;
+    transition: transform 0.3s ease;
+}
+
+.photoFrame:hover {
+    transform: translateY(-5px);
+}
+
+.photo {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+}
+
+.infoSection {
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;
+}
+
+.bio p {
+    font-size: 1.25rem;
+    line-height: 1.8;
+    color: rgba(255, 255, 255, 0.9);
+    margin-bottom: 2.5rem;
+}
+
+.strengths h3, .languages h3 {
+    font-size: 1.8rem;
+    margin-bottom: 1.5rem;
+    color: #ffffff;
+    position: relative;
+    padding-left: 1rem;
+}
+
+.strengths h3::before, .languages h3::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 2px;
+    height: 20px;
+    background: #ffffff;
+}
+
+.strengths ul, .languages ul {
+    list-style: none;
+    padding: 0;
+}
+
+.strengths li, .languages li {
+    color: rgba(255, 255, 255, 0.8);
+    margin-bottom: 0.8rem;
+    padding-left: 1.5rem;
+    position: relative;
+    font-size: 1.2rem;
+    transition: transform 0.2s ease;
+}
+
+.strengths li:hover, .languages li:hover {
+    transform: translateX(5px);
+}
+
+.strengths li::before, .languages li::before {
+    content: "›";
+    position: absolute;
+    left: 0;
+    color: #ffffff;
+}
+
+.skillsSection {
+    grid-column: 1 / -1;
+    margin-top: 3rem;
+    padding-top: 3rem;
+    border-top: 1px solid #1a1a1a;
+    margin-bottom: 20px;
+}
+
+.skillsSection h3 {
+    font-size: 1.8rem;
+    margin-bottom: 2.5rem;
+    text-align: center;
+    color: #ffffff;
+}
+
+.skillsGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+    gap: 1.2rem;
+}
+
+.skillItem {
+    background: #0a0a0a;
+    padding: 1.2rem;
+    border-radius: 8px;
+    text-align: center;
+    transition: all 0.3s ease;
+    cursor: default;
+    border: 1px solid #1a1a1a;
+    font-size: 1.2rem;
+}
+
+.skillItem:hover {
+    background: #1a1a1a;
+    transform: translateY(-3px);
+}
+
+.scrollToProjects {
+    position: absolute;
+    bottom: 40px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    color: rgba(255, 255, 255, 0.7);
+    cursor: pointer;
+    transition: all 0.3s ease;
+    z-index: 2;
+}
+
+.scrollToProjects:hover {
+    color: #ffffff;
+    transform: translateX(-50%) translateY(-5px);
+}
+
+.scrollText {
+    font-size: 1.1rem;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+}
+
+.scrollIcon {
+    width: 30px;
+    height: 50px;
+    border: 2px solid currentColor;
+    border-radius: 25px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+}
+
+.scrollIcon span {
+    width: 3px;
+    height: 8px;
+    border-radius: 2px;
+    background-color: currentColor;
+    margin-top: 8px;
+    animation: scrollAnim 1.5s infinite;
+}
+
+@keyframes scrollAnim {
+    0% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(20px);
+        opacity: 0;
+    }
+}
+
+@media (max-width: 768px) {
+    .about {
+        padding: 80px 0 150px;
+    }
+
+    .content {
+        grid-template-columns: 1fr;
+        padding: 2rem;
+        margin-bottom: 60px;
+    }
+
+    .photoSection {
+        max-width: 300px;
+        margin: 0 auto;
+    }
+
+    .about h2 {
+        font-size: 2.8rem;
+        margin-bottom: 4rem;
+    }
+
+    .skillsGrid {
+        grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+    }
+} 
